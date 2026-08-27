@@ -1,69 +1,238 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mastering AI Craftsmanship</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
-  <style>
-    :root {
-      --r-background-color: #111;
-    }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mastering AI Craftsmanship</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <style>
+        :root {
+            --r-background-color: #111;
+        }
 
-    body {
-      background: #111;
-    }
+        html,
+        body,
+        .reveal,
+        .reveal .slides section {
+            background: #111;
+        }
 
-    .reveal .slides section {
-      padding: 0;
-    }
+        .reveal .slides section {
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-    .reveal .slides img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      max-height: none;
-      object-fit: contain;
-      margin: 0;
-    }
+        .reveal .slides img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            max-height: none;
+            object-fit: contain;
+            margin: 0;
+        }
 
-    .reveal .progress {
-      height: 4px;
-    }
-  </style>
+        .reveal .progress {
+            height: 4px;
+        }
+
+        .kata-slide {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 3rem !important;
+            box-sizing: border-box;
+            color: #f4f1ea;
+        }
+
+        .kata-slide h2 {
+            margin: 0;
+            color: #f4f1ea;
+            font-size: 2.4em;
+        }
+
+        .kata-slide p {
+            margin: 0;
+            color: #b8b5ae;
+            font-size: 1.1em;
+        }
+
+        .kata-slide ul {
+            margin: 0;
+            padding-left: 1.2em;
+            color: #d8d5ce;
+            font-size: 0.72em;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        .kata-slide li {
+            margin-bottom: 0.3em;
+        }
+
+        .kata-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            width: min(92vw, 72rem);
+            align-items: start;
+        }
+
+        .kata-column h3 {
+            margin: 0 0 0.5em;
+            color: #f0b35b;
+            font-size: 1em;
+            text-align: left;
+        }
+
+        .kata-column pre {
+            margin: 0 0 1em;
+            padding: 0.7em 0.9em;
+            overflow: hidden;
+            background: #1c1c1c;
+            color: #d8d5ce;
+            font-size: 0.58em;
+            line-height: 1.35;
+            text-align: left;
+        }
+
+        .kata-column p {
+            margin: 0 0 0.8em;
+            color: #d8d5ce;
+            font-size: 0.72em;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        .kata-column strong {
+            color: #f0b35b;
+        }
+
+        .kata-column ul {
+            margin: 0;
+        }
+
+        @media (max-width: 700px) {
+            .kata-columns {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                overflow-y: auto;
+                max-height: 62vh;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div class="reveal">
-    <div class="slides">
-      <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_1.png" alt="Mastering AI Craftsmanship, slide 1"></section>
-      <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_2.png" alt="Mastering AI Craftsmanship, slide 2"></section>
-      <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_3.png" alt="Mastering AI Craftsmanship, slide 3"></section>
-      <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_4.png" alt="Mastering AI Craftsmanship, slide 4"></section>
-      <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_5.png" alt="Mastering AI Craftsmanship, slide 5"></section>
-      <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_6.png" alt="Mastering AI Craftsmanship, slide 6"></section>
-      <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_7.png" alt="Mastering AI Craftsmanship, slide 7"></section>
-      <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_8.png" alt="Mastering AI Craftsmanship, slide 8"></section>
-      <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_9.png" alt="Mastering AI Craftsmanship, slide 9"></section>
-      <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_10.png" alt="Mastering AI Craftsmanship, slide 10"></section>
-      <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_11.png" alt="Mastering AI Craftsmanship, slide 11"></section>
-      <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_12.png" alt="Mastering AI Craftsmanship, slide 12"></section>
-      <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_13.png" alt="Mastering AI Craftsmanship, slide 13"></section>
-      <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_14.png" alt="Mastering AI Craftsmanship, slide 14"></section>
-      <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_15.png" alt="Mastering AI Craftsmanship, slide 15"></section>
+    <div class="reveal">
+        <div class="slides">
+            <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_1.png"
+                    alt="Mastering AI Craftsmanship, slide 1"></section>
+            <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_2.png"
+                    alt="Mastering AI Craftsmanship, slide 2"></section>
+            <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_3.png"
+                    alt="Mastering AI Craftsmanship, slide 3"></section>
+            <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_4.png"
+                    alt="Mastering AI Craftsmanship, slide 4"></section>
+            <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_5.png"
+                    alt="Mastering AI Craftsmanship, slide 5"></section>
+            <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_6.png"
+                    alt="Mastering AI Craftsmanship, slide 6"></section>
+            <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_7.png"
+                    alt="Mastering AI Craftsmanship, slide 7"></section>
+            <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_8.png"
+                    alt="Mastering AI Craftsmanship, slide 8"></section>
+            <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_9.png"
+                    alt="Mastering AI Craftsmanship, slide 9"></section>
+            <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_10.png"
+                    alt="Mastering AI Craftsmanship, slide 10"></section>
+            <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_11.png"
+                    alt="Mastering AI Craftsmanship, slide 11"></section>
+            <section>
+                <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_12.png"
+                        alt="Mastering AI Craftsmanship, slide 12"></section>
+                <section class="kata-slide">
+                    <h2>Bowling Game Kata</h2>
+                    <div class="kata-columns">
+                        <div class="kata-column">
+                            <h3>Contract and rules</h3>
+                            <pre>game = new Game()
+game.roll(pins)
+game.score()</pre>
+                            <ul>
+                                <li>Accept rolls and return the final score.</li>
+                                <li>There are 10 frames. An open frame has up to 2 rolls.</li>
+                                <li>A spare uses both rolls for 10 pins and adds the next roll.</li>
+                                <li>A strike uses one roll for 10 pins and adds the next two rolls.</li>
+                                <li>The tenth frame can receive bonus rolls after a spare or strike.</li>
+                            </ul>
+                        </div>
+                        <div class="kata-column">
+                            <h3>Build it test-first</h3>
+                            <p><strong>Start:</strong> gutter game, all rolls score 0.</p>
+                            <p><strong>Then:</strong> one-pin rolls, an all-open game, one spare, and one strike.</p>
+                            <p><strong>Finish:</strong> consecutive strikes, a spare or strike in frame 10, and a perfect game.</p>
+                            <pre>all gutters       -> 0
+all strikes       -> 300
+9 / 0 repeated    -> 90
+5 / 5, 3          -> spare + 3 bonus</pre>
+                        </div>
+                    </div>
+                </section>
+                <section class="kata-slide">
+                    <h2>Prime Factors Kata</h2>
+                    <div class="kata-columns">
+                        <div class="kata-column">
+                            <h3>Contract and rules</h3>
+                            <pre>PrimeFactors.generate(n)
+
+1  -> []
+2  -> [2]
+8  -> [2, 2, 2]
+12 -> [2, 2, 3]
+30 -> [2, 3, 5]</pre>
+                            <ul>
+                                <li>Accept a positive integer and return its prime factors.</li>
+                                <li>Return factors in ascending order.</li>
+                                <li>Repeat factors according to their multiplicity.</li>
+                                <li>Do not return 1: it is not prime.</li>
+                            </ul>
+                        </div>
+                        <div class="kata-column">
+                            <h3>Build it test-first</h3>
+                            <p><strong>Start:</strong> make 1 produce an empty list.</p>
+                            <p><strong>Then:</strong> add 2 and 3, followed by 4, 6, 8, and 9.</p>
+                            <p><strong>Finish:</strong> cover repeated and mixed factors such as 12, 18, 24, and 30.</p>
+                            <p>Keep each cycle small: write one failing example, make it pass, then refactor while the tests stay green.</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_13.png"
+                    alt="Mastering AI Craftsmanship, slide 13"></section>
+            <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_14.png"
+                    alt="Mastering AI Craftsmanship, slide 14"></section>
+            <section><img src="assets/Mastering_AI_Craftsmanship_-_Slide_15.png"
+                    alt="Mastering AI Craftsmanship, slide 15"></section>
+        </div>
     </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
-  <script>
-    Reveal.initialize({
-      controls: true,
-      progress: true,
-      slideNumber: true,
-      hash: true,
-      overview: true,
-      center: true,
-      transition: 'fade',
-      backgroundTransition: 'none'
-    });
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: true,
+            hash: true,
+            overview: true,
+            center: true,
+            transition: 'fade',
+            backgroundTransition: 'none'
+        });
+    </script>
 </body>
+
 </html>
