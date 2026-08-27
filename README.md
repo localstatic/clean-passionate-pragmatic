@@ -16,6 +16,7 @@ My preference is that people opt-in to participating, as this is the most likely
 
 ### The Decks
 1. There is an intro slide deck outlining why this is necessary, and summarizing how the ideas that follow can be useful in our current environment. This deck is also likely a good candidate to share with leadership if they need to be involved.
+[View the Mastering AI Craftsmanship intro deck](https://perrydunnit.github.io/clean-passionate-pragmatic/slide-decks/1.%20Intro/)
 2. A simplified intro deck, a quick summary to begin topic-based sessions
 3. Some number of topic decks, each containing
    1. a topic summary
