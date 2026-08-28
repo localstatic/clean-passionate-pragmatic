@@ -45,6 +45,32 @@ game.roll(0); game.roll(0);
 
 assert.equal(game.score(), 0);
 
+// Round 2 - 9 / 0 repeated    -> 90
+console.log('Testing "9/0 repeated -> 90" ...');
+game = new BowlingGame();
+game.roll(9);
+game.roll(0);
+game.roll(9);
+game.roll(0);
+game.roll(9);
+game.roll(0);
+game.roll(9);
+game.roll(0);
+game.roll(9);
+game.roll(0);
+game.roll(9);
+game.roll(0);
+game.roll(9);
+game.roll(0);
+game.roll(9);
+game.roll(0);
+game.roll(9);
+game.roll(0);
+game.roll(9);
+game.roll(0);
+
+assert.equal(game.score(), 90);
+
 
 // End
 
