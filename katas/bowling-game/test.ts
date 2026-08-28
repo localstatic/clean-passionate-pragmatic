@@ -1,7 +1,44 @@
+/*
+
+# Contract and rules
+
+game = new Game()
+game.roll(pins)
+game.score()
+
+    Accept rolls and return the final score.
+    There are 10 frames. An open frame has up to 2 rolls.
+    A spare uses both rolls for 10 pins and adds the next roll.
+    A strike uses one roll for 10 pins and adds the next two rolls.
+    The tenth frame can receive bonus rolls after a spare or strike.
+
+# Build it test-first
+
+Start: gutter game, all rolls score 0.
+
+Then: one-pin rolls, an all-open game, one spare, and one strike.
+
+Finish: consecutive strikes, a spare or strike in frame 10, and a perfect game.
+
+all gutters       -> 0
+all strikes       -> 300
+9 / 0 repeated    -> 90
+5 / 5, 3          -> spare + 3 bonus
+*/
+
 import assert from 'node:assert/strict';
 import { BowlingGame } from './bowling-game.ts';
 
-const game = new BowlingGame();
+let game = new BowlingGame();
 
 assert.equal(game.score(), 0);
+
+// Round [x]
+
+
+
+
+// End
+
 console.log('Bowling Game kata scaffold: PASS');
+
