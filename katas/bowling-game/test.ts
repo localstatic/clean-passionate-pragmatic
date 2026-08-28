@@ -33,9 +33,17 @@ let game = new BowlingGame();
 
 assert.equal(game.score(), 0);
 
-// Round [x]
+// Round 0 - all gutters       -> 0
+console.log('Testing "all gutters" ...');
+game = new BowlingGame();
 
+// 20 gutter balls
+game.roll(0); game.roll(0); game.roll(0); game.roll(0); game.roll(0); game.roll(0);
+game.roll(0); game.roll(0); game.roll(0); game.roll(0); game.roll(0); game.roll(0);
+game.roll(0); game.roll(0); game.roll(0); game.roll(0); game.roll(0); game.roll(0);
+game.roll(0); game.roll(0);
 
+assert.equal(game.score(), 0);
 
 
 // End
