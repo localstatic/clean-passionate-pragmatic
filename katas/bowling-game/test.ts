@@ -71,6 +71,15 @@ game.roll(0);
 
 assert.equal(game.score(), 90);
 
+// Round 2 - 5 / 5, 3          -> spare + 3 bonus
+console.log('Testing "5 / 5, 3 -> 16" ...');
+game = new BowlingGame();
+game.roll(5);
+game.roll(5);
+game.roll(3);
+
+assert.equal(game.score(), 16);
+
 
 // End
 
