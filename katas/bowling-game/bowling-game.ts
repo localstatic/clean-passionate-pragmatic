@@ -28,7 +28,29 @@ export class BowlingGame {
             }
 
             score += curFrame[0];
-            
+
+            // Handle strikes
+
+            if (curFrame[0] === 10) {
+                // It's a strike
+
+                if (this._frames[i+1] !== undefined && this._frames[i+1][0] !== undefined) {
+                    score += this._frames[i+1][0];
+                }
+                if (this._frames[i+1] !== undefined && this._frames[i+1][1] !== undefined) {
+                    score += this._frames[i+1][1];
+                }
+                
+                if (this._frames[i+2] !== undefined && this._frames[i+2][0] !== undefined) {
+                    score += this._frames[i+2][0];
+                }
+                if (this._frames[i+2] !== undefined && this._frames[i+2][1] !== undefined) {
+                    score += this._frames[i+2][1];
+                }
+            }
+
+            //
+
             if (curFrame[1] === undefined) {
                 continue;
             }
