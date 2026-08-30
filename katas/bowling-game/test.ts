@@ -80,6 +80,27 @@ game.roll(3);
 
 assert.equal(game.score(), 16);
 
+// Round 3 - all strikes       -> 300
+console.log('Testing "all strikes -> 300" ...');
+game = new BowlingGame();
+game.roll(10);
+game.roll(10);
+game.roll(10);
+game.roll(10);
+game.roll(10);
+game.roll(10);
+game.roll(10);
+game.roll(10);
+game.roll(10);
+game.roll(10);
+game.roll(10);
+game.roll(10);
+
+assert.equal(game.score(), 300);
+
+
+
+
 
 // End
 
